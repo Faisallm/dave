@@ -4,13 +4,17 @@ import React from "react";
 // header component
 // can  I define a component inside a component?
 
-const Header = () => {
-
+const Header = ({ title }) => {
   return (
     <header>
-      <h1> Groceries List </h1>
+      <h1> {title} </h1>
     </header>
   );
+};
+
+// default props values
+Header.defaultProps = {
+  title: "Default Title",
 };
 
 export default Header;
